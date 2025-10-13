@@ -1,0 +1,35 @@
+{
+  "name": "webhook_bin",
+  "version": "1.0.0",
+  "description": "A Simple Webhook for my CTF Journey",
+  "keywords": [
+    "webhook",
+    "express",
+    "ctf",
+    "webhook-bin",
+    "webhook-server",
+    "json-webhook",
+    "simple-webhook"
+  ],
+  "license": "UNLICENSED",
+  "author": "MowlandCodes",
+  "type": "commonjs",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node build/index.js",
+    "dev": "nodemon src/index.ts"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.7.2",
+    "@types/uuid": "^10.0.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
