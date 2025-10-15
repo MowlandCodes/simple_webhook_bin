@@ -1,7 +1,7 @@
 # Webhook Bin 🎣
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MowlandCodes/MowlandCodes/main/assets/banner.png" alt="Webhook Bin Banner" />
+  <img src="https://raw.githubusercontent.com/MowlandCodes/simple_webhook_bin/main/assets/banner.png" alt="Webhook Bin Banner" />
 </p>
 
 <p align="center">
