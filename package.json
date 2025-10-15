@@ -13,23 +13,29 @@
   ],
   "license": "UNLICENSED",
   "author": "MowlandCodes",
-  "type": "commonjs",
-  "main": "src/index.ts",
+  "module": "src/index.ts",
   "scripts": {
-    "build": "npx tsc",
+    "build": "npx tsc && npx tsc-alias",
     "start": "node build/index.js",
-    "dev": "nodemon src/index.ts"
+    "dev": "nodemon --exec ts-node -r tsconfig-paths/register src/index.ts"
   },
   "dependencies": {
+    "body-parser": "^2.2.0",
     "express": "^5.1.0",
+    "knex": "^3.1.0",
+    "mysql": "^2.18.1",
+    "tsc-alias": "^1.8.16",
     "uuid": "^13.0.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
+    "@types/knex": "^0.15.2",
     "@types/node": "^24.7.2",
     "@types/uuid": "^10.0.0",
+    "dotenv": "^17.2.3",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.9.3"
   }
 }
