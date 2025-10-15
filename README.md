@@ -1,4 +1,4 @@
-# Webhook Bin 🎣
+<h1 align="center">🪝 Webhook Bin 🪝</h1>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/MowlandCodes/simple_webhook_bin/main/assets/banner.png" alt="Webhook Bin Banner" />
