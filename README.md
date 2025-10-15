@@ -16,7 +16,7 @@
 
 ---
 
-## ## About The Project
+## About The Project
 
 Pernah kesel pas lagi ikut CTF atau ngoprek sesuatu, terus butuh cara cepet buat nangkep dan nginspeksi _payload_ dari webhook? **Webhook Bin** adalah solusinya. Ini adalah server Express.js sederhana yang siap menampung semua data webhook yang dikirim, menyimpannya secara persisten di database, dan memungkinkan kamu untuk mengaksesnya kembali kapan pun lewat API.
 
@@ -24,7 +24,7 @@ Gak perlu lagi ngandelin servis _online_ yang datanya ilang atau terbatas. Denga
 
 ---
 
-## ## ✨ Features
+## ✨ Features
 
 - **🗄️ Persistent Storage:** Semua data yang masuk disimpan di database (SQLite, MySQL, PostgreSQL, dll) menggunakan Knex.js. Gak ada lagi data yang hilang pas server di-restart.
 - **🔌 Flexible Data Ingestion:** Bisa nangkep data dari `Body` ataupun `Query Parameter`, bahkan bisa nge-merge keduanya secara otomatis.
@@ -34,7 +34,7 @@ Gak perlu lagi ngandelin servis _online_ yang datanya ilang atau terbatas. Denga
 
 ---
 
-## ## 🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 Proyek ini dibangun menggunakan teknologi modern dan handal:
 
@@ -45,18 +45,18 @@ Proyek ini dibangun menggunakan teknologi modern dan handal:
 
 ---
 
-## ## 🚀 Getting Started
+## 🚀 Getting Started
 
 Ikuti langkah-langkah ini untuk menjalankan server Webhook Bin di lokal.
 
-### ### Prerequisites
+### Prerequisites
 
 Pastikan kamu sudah menginstall:
 
 - [Node.js](https://nodejs.org/) (v18 atau lebih tinggi)
 - NPM / Yarn / PNPM
 
-### ### Installation
+### Installation
 
 1. **Clone the repository:**
 
@@ -97,7 +97,7 @@ Pastikan kamu sudah menginstall:
 
 ---
 
-## ## 📖 API Endpoints
+## 📖 API Endpoints
 
 Berikut adalah daftar _endpoint_ yang tersedia.
 
@@ -109,7 +109,7 @@ Berikut adalah daftar _endpoint_ yang tersedia.
 
 ---
 
-## ## ⚙️ Configuration
+### ⚙️ Configuration
 
 Aplikasi ini dikonfigurasi menggunakan _environment variables_.
 
@@ -126,7 +126,7 @@ Aplikasi ini dikonfigurasi menggunakan _environment variables_.
 
 ---
 
-## ## 📜 License
+## 📜 License
 
 Proyek ini berada di bawah lisensi UNLICENSED. Silakan gunakan, modifikasi, dan distribusikan sesuai kebutuhan. Jika kamu ingin menggunakannya sebagai proyek open-source, pertimbangkan untuk menambahkan lisensi seperti MIT.
 
