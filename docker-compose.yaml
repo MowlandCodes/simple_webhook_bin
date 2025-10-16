@@ -1,0 +1,52 @@
+services:
+  database:
+    image: mysql:latest
+    container_name: webhook_db
+    restart: unless-stopped
+    environment:
+      # Silahkan tambahkan variabel di bawah ini sesuai kebutuhan di file .env
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_TCP_PORT: 3360
+    ports:
+      - "3360:3360"
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 30s
+      interval: 5s
+      retries: 5
+
+  app:
+    build:
+      context: .
+    container_name: webhook_bin
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    # Silahkan di uncomment jika ingin menggunakan SQLite sebagai database driver
+    # volumes:
+    #   - ./db:/app/database.db
+    restart: unless-stopped
+    depends_on:
+      database:
+        condition: service_healthy
+
+  ngrok:
+    image: ngrok/ngrok:latest
+    container_name: ngrok
+    ports:
+      - "4040:4040"
+    environment:
+      NGROK_AUTHTOKEN: ${NGROK_AUTHTOKEN}
+    command: ["http", "app:3000"]
+    depends_on:
+      - app
+    restart: unless-stopped
+
+volumes:
+  db_data:

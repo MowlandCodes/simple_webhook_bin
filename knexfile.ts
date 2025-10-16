@@ -6,7 +6,7 @@ dotenv.config();
 
 const config: { [key: string]: Knex.Config } = {
   development: {
-    client: process.env.DB_DRIVER || "mysql", // Default DB Client to MySQL, valid options are 'mysql', 'pg', 'sqlite3'
+    client: process.env.DB_DRIVER || "mysql2", // Default DB Client to MySQL, valid options are 'mysql', 'pg', 'sqlite3'
     connection: {
       host: process.env.DB_HOST || "127.0.0.1",
       port: Number(process.env.DB_PORT) || 3306,
@@ -24,7 +24,7 @@ const config: { [key: string]: Knex.Config } = {
   },
 
   production: {
-    client: process.env.DB_DRIVER || "mysql", // Default DB Client to MySQL
+    client: process.env.DB_DRIVER || "mysql2", // Default DB Client to MySQL
     connection: {
       host: process.env.DB_HOST || "127.0.0.1",
       port: Number(process.env.DB_PORT) || 3306,
